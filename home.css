@@ -1,0 +1,54 @@
+.logout {
+    color:white;
+    background-color:red;
+    border:2px solid rgb(252, 85, 85);
+}
+.logout:hover {
+    color:white;
+    background-color:red;
+    border:2px solid red;
+    box-shadow:5px 5px 38px red;
+}
+body {
+    text-align:center;
+    background-color:black;
+}
+.left-space { 
+    float:left;
+}
+.btn {
+    color:white;
+    background-color:rgb(32, 32, 32);
+    border:2px solid rgb(21, 21, 21);
+    border-radius:2px;
+}
+.btn:hover {
+    color:blue;
+    background-color:rgb(32, 32, 32);
+    border:2px solid blue;
+    border-radius:2px;
+    box-shadow:5px 5px 38px blue;
+}
+h1,h2,h3,h4,h5,h6,p,b {
+    color:white;
+    font-family:Arial;
+}
+img {
+    border-radius:15px;
+}
+.room_name {
+    background-color:rgb(32, 32, 32);
+    border:2px solid rgb(21, 21, 21);
+    color:white;
+    font-family:Arial;
+}
+.room_name:hover {
+    background-color:rgb(32, 32, 32);
+    border:2px solid blue;
+    color:blue;
+    box-shadow:5px 5px 38px blue;
+    font-family:Arial;
+}
+#right-space {
+    float:right; 
+}

@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Telegraph-ChatPage</title>
+       <!-- <link href = "Chat.css" rel = "stylehseet">-->
+       <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+       <script src = "https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+       <style>
+        .logout {
+    color:white;
+    background-color:red;
+    border:2px solid rgb(252, 85, 85);
+  
+}
+.logout:hover {
+    color:white;
+    background-color:red;
+    border:2px solid red;
+    box-shadow:5px 5px 38px red;
+}
+h1,h2,h3,h4,h5,h6,p,b {
+    color:white;
+    font-family:Arial;
+}
+.btn {
+    color:white;
+    background-color:rgb(32, 32, 32);
+    border:2px solid rgb(21, 21, 21);
+    border-radius:2px;
+}
+.btn:hover {
+    color:blue;
+    background-color:rgb(32, 32, 32);
+    border:2px solid blue;
+    border-radius:2px;
+    box-shadow:5px 5px 38px blue;
+}
+#message {
+    width:100%;
+}
+#Footer {
+    bottom: 0; position:fixed;
+    width:100%;
+background-color:rgb(32, 32, 32);
+border:2px solid rgb(21, 21, 21);
+border-radius:15px;
+}
+body {
+    text-align:center;
+    background-color:black;
+}
+.likebtn {
+    color:white;
+    background-color:lightgreen;
+    border:2px solid green;
+    border-radius:2px;
+    
+}
+.likebtn:hover {
+    color:white;
+    background-color:lightgreen;
+    border:2px solid rgb(131, 235, 131);
+    box-shadow:5px 5px 38px lightgreen;
+    border-radius:2px;
+    
+}
+       </style>
+    </head>
+    <body oncontextmenu="return false;">
+        <button class = "logout" onclick = "backtohome()">Back</button><br><br>
+        <div id = "output">
+
+        </div>
+        <div id = "Footer">
+            <input id = "message">
+            <br><span><button class = "btn" onclick = "stt()">SpeechToText</button><button class = "btn" onclick = "send()">Send</button><button class = "btn" onclick = "sender()">Selfie Sender</button></span><br>
+           <span id = "area"></span>
+        </div>
+    <script src = "Chat.js"></script>    
+    </body>
+</html>

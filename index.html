@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Telegraph-Username</title>
+        <link href = "style.css" rel = "stylesheet">
+    </head>
+    <body oncontextmenu="return false;">
+      <br><br><br>
+      <div id = "image-body">
+<img src= "https://nationalmaglab.org/images/education/magnet_academy/history/museum/1844-telegraphreceiver.png">
+<br><b>~The international MORSE CODE~</b>
+      </div>
+      <br><br>
+      <input id = "username" placeholder = "Enter Username">
+  <button onclick = "join()" class = "btn" id = "joinbtn">Join</button><br><br>
+  <input id = "fp" placeholder = "Telegraph Admin Password"><button onclick = "enter()" class = "btn" id = "joinbtn">Enter</button>
+  <script>
+    document.onkeydown=function(e)
+    {
+        if (event.keyCode == 123) {
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+            return false;
+        }
+        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+return false;
+        }
+    }
+    var status = localStorage.getItem("Status");
+    var id = document.getElementById("fp");
+    var inp = document.getElementById("username");
+    var UserStat2 = localStorage.getItem("userstat2");
+    var tries = 0;
+    function join() {
+        if (UserStat2 == "true") {
+            localStorage.setItem("Status",1);
+        if (inp.value == "") {
+            localStorage.setItem("Telegraph||Username","Telegraph Anonymous");
+            window.location = "main.html";
+        }
+        else {
+            localStorage.setItem("Telegraph||Username",inp.value);
+            window.location = "main.html";
+        }
+    }else if(UserStat2 == "false"){
+window.alert(`
+You may not join!
+You are banned from this app.
+`);
+    }else if(UserStat2 == undefined) {
+        if (inp.value == "") {
+            localStorage.setItem("Telegraph||Username","<p>Rick Astley</p> <br> <img style = 'width:100px;height:100px;border-radius:15px;' src = 'Rickroll.gif'>");
+            window.location = "main.html";
+        }
+        else {
+            localStorage.setItem("Telegraph||Username",inp.value);
+            window.location = "main.html";
+        }
+    }
+    } 
+    function enter() {
+        if (UserStat2 == "true") {
+            if (tries == 3) {
+                localStorage.setItem("userstat2","false");
+window.location = "index.html";
+            }else {
+                if (id.value == "4096800650*") {
+localStorage.setItem("Status" , 2);
+localStorage.setItem("Telegraph||Username","<p style = 'color:blue;'>Telegraph Monitor Admin</p>");
+            window.location = "main.html";
+}else {
+    tries++;
+    window.alert("Incorrect");
+}
+            }
+        }else if(UserStat2 == "false") {
+            window.alert("You may not use this because you are banned.");
+        }else {
+            window.alert("New people may not use this.");
+        }
+}
+  </script>
+    </body>
+</html>
